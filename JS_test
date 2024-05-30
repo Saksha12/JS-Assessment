@@ -1,0 +1,46 @@
+// Array to store NFTs
+const NFTs = [];
+
+// Function to mint a new NFT
+function mintNFT(_name, _eyecolor, _shirtType, _bling) {
+    // Create a new NFT object with the provided attributes
+    const NFT = {
+        "name": _name,
+        "eyecolor": _eyecolor,
+        "shirtType": _shirtType,
+        "bling": _bling
+    };
+    // Add the new NFT to the NFTs array
+    NFTs.push(NFT);
+    // Prints a message indicating the NFT has been minted
+    console.log("Minted " + _name);
+}
+
+// Function to list all minted NFTs
+function listNFTs() {
+    // Iterate through the NFTs array and log the details of each NFT
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log("\nID: " + (i + 1));
+        console.log("Name: \t\t" + NFTs[i].name);
+        console.log("Eyecolor:\t" + NFTs[i].eyecolor);
+        console.log("Shirt Type:\t" + NFTs[i].shirtType);
+        console.log("Bling:\t\t" + NFTs[i].bling);
+    }
+}
+
+// Function to get the total number of minted NFTs
+function getTotalSupply() {
+    // prints the length of the NFTs array
+    console.log("\nTotal NFTs: " + NFTs.length);
+}
+
+// Minting three example NFTs
+mintNFT("Rahul", "Brown", "Hoodie", "Golden Chain");
+mintNFT("Sahil", "Brown", "T-Shirt", "Golden Chain");
+mintNFT("Saksham", "Brown", "Shirt", "Golden Chain");
+
+// Listing all minted NFTs
+listNFTs();
+
+// Getting the total supply of NFTs
+getTotalSupply();
